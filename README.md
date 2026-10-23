@@ -33,7 +33,7 @@ PM> Install-Package ZoomNet
 ZoomNet currently supports:
 - `.NET framework 4.8`
 - any framework supporting `.NET Standard 2.0` (which includes .NET 5.0 and all subsequent versions as well as some legacy versions such as .NET Core 3.x and ASP.NET Core 3.x).
-- `.NET 8.0`
+- `.NET 10.0`
 
 The last version of ZoomNet that supported `.NET framework 4.6.1` and `.NET framework 4.7.2` was 0.35.0
 
@@ -221,7 +221,7 @@ Having said all this, there's an even better approach if you are using an IoC co
 If you are using [Microsoft.Extensions.DependencyInjection](https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection), the ZoomNet library contains a convenient extension method that will register and manage the litetime of the `ZoomClient` as well as manage the underlying HttpClient, all with the goal of avoiding socket exhaustion.
 For other IoC containers (Autofac, SimpleInjector, Pure.DI, etc.), you'll need to register services manually using similar patterns.
 
-1. Here's an example showing how to register the ZoomNet client for .NET 8+ web apps:
+1. Here's an example showing how to register the ZoomNet client for .NET 10+ web apps:
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
